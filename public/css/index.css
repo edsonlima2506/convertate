@@ -1,0 +1,34 @@
+main {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.principal-image {
+    width: 500px;
+}
+
+.form {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 30px;
+}
+
+.form-select:focus, input[type="file"]:focus {
+    box-shadow: 2px 2px 2px 2px #ec3a2d62 !important;
+}
+
+#button {
+    display: none;
+}
