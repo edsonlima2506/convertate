@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConvertController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,6 @@ Route::prefix('index')->group(function () {
     Route::get('/', function () {
         return view('index');
     });
+
+    Route::post('/convert', [ConvertController::class, 'convert']);
 });

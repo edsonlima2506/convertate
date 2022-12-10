@@ -9,17 +9,18 @@
     <main>
         <img src="{{asset('img/storyset/index-image.png')}}" alt="" class="principal-image">
         <div class="form">
-            <form action="" method="POST">
+            <form action="/index/convert" file="true" method="POST" enctype="multipart/form-data" id="convert-form">
+                @csrf
                 {{-- File input --}}
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Faça o upload do seu arquivo</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="formFile" name="file">
                 </div>
 
                 {{-- File type select --}}
                 <div class="mb-3">
                     <label for="form-select" class="form-label">Escolha para qual formato converter</label>
-                    <select class="form-select" id="form-select" aria-label="Default select">
+                    <select class="form-select" id="form-select" name="type" aria-label="Default select">
                         <option selected>PNG</option>
                         <option value="1">PDF</option>
                         <option value="2">JPG</option>
@@ -58,5 +59,6 @@
         </div>
     </main>
     <script src="{{asset('js/button.js')}}"></script>
+    <script src="{{asset('js/convert.js')}}"></script>
 </body>
 </html>
